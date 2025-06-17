@@ -6,7 +6,7 @@ Shiny R app hosted locally to explore ATARI data (spectral flow cytometry) and c
 
 Data from the [ATARI clinical trial](https://doi.org/10.3389/fmed.2023.1198173). Briefly, 14 peanut-allergic adult participants underwent either oral immunotherapy adjuvanted with abatacept (active arm) or oral immunotherapy with placebo (control arm). Blood samples were taken at 7 timepoints during the trial and peripheral blood mononuclear cells (PBMCs) were isolated and stimulated with peanut extract or left unstimulated.
 
-PBMCs were then prepared for two different spectral flow cytometry panels : surface markers and intracellular markers. Spectral flow cytometry data were acquired with the Sony ID7000. All FCS files produced are in the repo. 
+PBMCs were then prepared for two different spectral flow cytometry panels : surface markers and intracellular markers. Spectral flow cytometry data were acquired with the Sony ID7000. All pre-processed FCS files produced are stored externally and can be downloaded following the instructions in step #2 of Setup. 
 
 
 ## Features
@@ -39,7 +39,7 @@ User can only view the pre-processing steps and cannot modify any of the data. A
 
 ## Setup
 
-If you haven't installed R yet, download the correct version for your OS [here](https://cloud.r-project.org/). R 4.4.0 is minimally required. [RStudio](https://posit.co/download/rstudio-desktop/) is optional, but offers a better interface.  
+If you haven't installed R yet, download the correct version for your OS [here](https://cloud.r-project.org/). R 4.4.0 is minimally required. [RStudio](https://posit.co/download/rstudio-desktop/) is optional, but offers a nicer user interface.  
 
 1. Clone the repository
 
@@ -54,11 +54,28 @@ git clone git@github.com:emilier17/ShinyR_ATARI.git
 ```
 A directory called ShinyR_ATARI will be created in the current working directory. Open the directory ShinyR_ATARI.
 
-2. Install necessary packages
+2. Download FCS files
 
-A R script called requirements.R contains all necessary packages. Open this file and run the script (select all code and run).
+Download all fcs files from [here (Google Drive)](https://drive.google.com/drive/folders/1IyBjSKQHfHzupKUAEJ8VhuqgRAOIpsAP?usp=sharing). The Google Drive folder structure mirrors the GitHub folder structure. Place the fcs files in their corresponding folders:
 
-3. Launch Shiny R app
+.
+└── ShinyR_ATARI/
+    ├── data/
+    │   ├── intracell/
+    │   │   ├── peanut/       <-- place fcs files here
+    │   │   └── unstim/       <-- place fcs files here
+    │   └── surface/
+    │       ├── peanut/       <-- place fcs files here
+    │       └── unstim/       <-- place fcs files here
+    ├── modules
+    ├── screens
+    └── www
+
+3. Install necessary packages
+
+A R script called requirements.R contains all necessary packages and verifies that fcs files were properly downloaded. Open this file and run the script (select all code and run).
+
+4. Launch Shiny R app
 
 Open app.R and either press "Run App" in the top right corner of the source pane or in the console run:
 ```
