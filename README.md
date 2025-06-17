@@ -57,7 +57,7 @@ A directory called ShinyR_ATARI will be created in the current working directory
 2. Download FCS files
 
 Download all fcs files from [here (Google Drive)](https://drive.google.com/drive/folders/1IyBjSKQHfHzupKUAEJ8VhuqgRAOIpsAP?usp=sharing). The Google Drive folder structure mirrors the GitHub folder structure. Place the fcs files in their corresponding folders:
-
+```
 .
 └── ShinyR_ATARI/
     ├── data/
@@ -70,6 +70,7 @@ Download all fcs files from [here (Google Drive)](https://drive.google.com/drive
     ├── modules
     ├── screens
     └── www
+```
 
 3. Install necessary packages
 
