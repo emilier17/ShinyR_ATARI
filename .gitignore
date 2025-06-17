@@ -1,0 +1,16 @@
+
+# Ignore raw FCS files only
+data/surface/peanut/*.fcs
+data/surface/unstim/*.fcs
+data/intracell/peanut/*.fcs
+data/intracell/unstim/*.fcs
+
+# Keep metadata and aggregate files
+!data/surface/metadata.csv
+!data/surface/agg_unstim_surface.fcs
+!data/intracell/metadata.csv
+!data/intracell/agg_unstim_intracell.fcs
+!data/cell_count.csv
+!data/cofactors.csv
+!data/marker_range.csv
+!data/peacoQC.csv
