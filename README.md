@@ -23,6 +23,7 @@ The ATARI Shiny R app lets users:
     3. Population Search: find specific cellular populations based on marker expression patterns.
     4. Marker Expression: visualize a single marker's expression in clusters.
     5. Differential Analysis: perform differential analysis between experimental conditions.
+
 Check out the screens folder to get a preview of the app. 
 
 
